@@ -1,7 +1,7 @@
 # Site navigation links
 
 - title: Home
-  url:http://rolinyan.github.io/
+  url: http://rolinyan.github.io/
 
 - title: About
   url: /about/
@@ -11,6 +11,9 @@
 
 - title: Ruby
   url: /rubys/
+
+- title: Made Mistakes
+  url: http://mademistakes.com
 
 - title: Search
   url: /search/
