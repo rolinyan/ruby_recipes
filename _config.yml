@@ -55,4 +55,4 @@ social:
 comments :
   provider : duoshuo
   duoshuo : 
-  short_name : rolinyan
+    short_name : rolinyan
