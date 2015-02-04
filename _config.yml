@@ -3,9 +3,9 @@ markdown: redcarpet
 highlighter: pygments
 
 # Site settings
-title: "严培雄 - Ruby Recipes"
+title: "Rolin Yan's Ruby Recipes"
 description: > # this means to ignore newlines until "email:"
-  严培雄-Ruby Recipes
+  Code from Learning Ruby.
 
 email: rolinyan@qq.com
 #blog logo
