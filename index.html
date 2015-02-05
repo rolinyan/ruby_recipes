@@ -34,21 +34,30 @@ layout: default
     </div> -->
 
 </header>
-    <div class="nav">
-      <hr/>
-       <ul>
-         <li><a href="#">Home</a></li>
-         <li><a href="#">Life</a></li>
-         <li><a href="#">About</a></li>
-         <li><a href="#">Ruby</a></li>
-         <li><a href="#">Rails</a></li>
-         <li><a href="#">Javascript</a></li>
-         <li><a href="#">NodeJs</a></li>
-         <li><a href="#">导航5</a></li>
-         <li><a href="#">导航5</a></li>
-       </ul>
-       <hr/>
-    </div>
+<div class="nav">
+  <hr/>
+   <ul>
+     <li><a href="http://rolinyan.github.io/">Home</a></li>
+     <li><a href="http://rolinyan.github.io/">Life</a></li>
+     <li><a href="{{ site.baseurl }}/about/">About</a></li>
+     <li><a href="http://rolinyan.github.io/ruby_recipes">Ruby</a></li>
+     <li><a href="http://rolinyan.github.io/rails_recipes">Rails</a></li>
+     <li><a href="http://rolinyan.github.io/js_recipes">Javascript</a></li>
+     <li><a href="http://rolinyan.github.io/css_recipes">NodeJs</a></li>
+     <li><a href="http://rolinyan.github.io/swift_recipes">Swift</a></li>
+     <li>
+         {% for social in site.social %}
+            {% if social.url %}
+              <a class="icon-{{ social.icon }}" href="{{ social.url }}">
+              <i class="fa fa-{{ social.icon }}"></i>
+              </a>
+            &nbsp;&nbsp;·&nbsp;&nbsp;
+           {% endif %}
+        {% endfor %}
+    </li>
+   </ul>
+   <hr/>
+</div>
 
 <main class="content" role="main">
 
