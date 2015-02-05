@@ -1,5 +1,6 @@
 .nav ul{
-    width:980px;
+    width:100%;
+    max-width: 960;
     margin:0px auto;
     height:38px;
     padding:0;
