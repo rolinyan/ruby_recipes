@@ -1,6 +1,4 @@
-a.home{
-    margin-left: 30px;
-}
+
 .nav ul{
 width:100%;
 max-width: 960px;
@@ -48,4 +46,8 @@ background:#FFF;
 .nav hr{
 width:100%;
 max-width: 960px;
+}
+
+a.home{
+    margin-left: 30px;
 }
