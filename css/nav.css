@@ -10,24 +10,24 @@ float:left;
 list-style:none;
 }
 .nav ul li a{
-width:80px;
+width:82px;
 height:28px;
 line-height:28px;
 background:black;
 color:white;
-margin:5px 15px;
+margin:5px 10px;
 font-size:12px;
 display:block;
 text-align:center;
 text-decoration:none;
 }
 .nav ul li a.social{
-width:80px;
+width:82px;
 height:28px;
 line-height:28px;
 /*background:white;*/
 /*color:white;*/
-margin:5px 15px;
+margin:5px 10px;
 font-size:12px;
 display:block;
 text-align:center;
