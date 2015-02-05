@@ -29,3 +29,8 @@
     color:red;
     background:#FFF;
     }
+
+.nav hr{
+    width:100%;
+    max-width: 640px;
+}
