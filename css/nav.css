@@ -1,12 +1,8 @@
 .nav ul{
 width:980px;/*设置元素宽度为980px*/
 border:1px solid #000;/*设置一个颜色为#000，宽度为1px的边框*/
-}
-
-.nav ul{
-width:980px;/*设置元素宽度为980px*/
-border:1px solid #000;/*设置一个颜色为#000，宽度为1px的边框*/
 margin:0px auto 0px auto;/*也可以简写为margin:0 auto*/
+position: relative;
 }
 
 .nav ul li{
