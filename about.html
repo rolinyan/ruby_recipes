@@ -84,12 +84,10 @@ tags: ruby
         </article>
       {% endfor %}
     </div>
-
- <!--    <h5 class="index-headline normal"><span>Regular</span></h5>
-    {% endif %} -->
+    {% endif %}
 
     <div class="cf frame">
-      {% for post in paginator.posts %}
+      {% for post in paginator.posts.tags.ruby %}
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
