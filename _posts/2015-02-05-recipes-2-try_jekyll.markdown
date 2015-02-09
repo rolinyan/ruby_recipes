@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Welcome to Rolin Yan's Ruby Recipes!"
+title:  "Welcome ah"
 date:   2015-02-05 14:34:25
-categories: Metaprogramming 
-tags: MetaProgramming
+categories: ruby 
+tags: ruby
 image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
 id: 2
 ---
