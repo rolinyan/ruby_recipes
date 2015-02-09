@@ -6,11 +6,12 @@
   <body>
 
     {% include header.html %}
-    {% include navbar.html %}
+    
     <!-- content start -->
 
     <div class="page-content">
       <div class="wrapper">
+        {% include navbar.html %}
         {{ content }}
       </div>
     </div>
