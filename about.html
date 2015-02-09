@@ -1,0 +1,127 @@
+---
+layout: default
+title: About
+permalink: /about/
+categories: ruby 
+tags: ruby
+---
+
+<div class="teaserimage">
+    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.baseurl }}{{ site.cover }})"{% endif %}>
+        Teaser Image
+    </div>
+</div>
+
+<header class="blog-header">
+    {% if site.logo %}
+      <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.baseurl }}{{ site.logo }}')">{{ site.title }}</a>
+    {% endif %}
+    <h1 class="blog-title">{{ site.title }}</h1>
+    <h2 class="blog-description">{{ site.description }}</h2>
+<!--     <div class="custom-links">
+      <hr/>
+      {% for social in site.social %}
+        {% if social.url %}
+            <a class="icon-{{ social.icon }}" href="{{ social.url }}">
+              <i class="fa fa-{{ social.icon }}"></i>
+            </a>
+            &nbsp;&nbsp;·&nbsp;&nbsp;
+        {% endif %}
+      {% endfor %}
+      <a href="http://rolinyan.github.io/">Home</a>
+      <a href="http://rolinyan.github.io/">Life</a>
+      <a href="http://rolinyan.github.io/ruby_recipes/">Ruby</a>
+      <a href="http://rolinyan.github.io/rails_recipes/">Rails</a>
+      <a href="http://rolinyan.github.io/js_recipes/">Javascript</a>
+      <a href="{{ site.baseurl }}/about/">About</a>
+      <hr/>
+    </div> -->
+
+</header>
+<div class="nav">
+  <hr/>
+   <ul>
+     <li><a href="http://rolinyan.github.io/" class="home">Home</a></li>
+     <li><a href="http://rolinyan.github.io/">Life</a></li>
+     <li><a href="{{ site.baseurl }}/about/">About</a></li>
+     <li><a href="http://rolinyan.github.io/ruby_recipes">Ruby</a></li>
+     <li><a href="http://rolinyan.github.io/rails_recipes">Rails</a></li>
+     <li><a href="http://rolinyan.github.io/js_recipes">Javascript</a></li>
+     <li><a href="http://rolinyan.github.io/css_recipes">NodeJs</a></li>
+     <li><a href="http://rolinyan.github.io/swift_recipes">Swift</a></li>
+     <li>
+         {% for social in site.social %}
+            {% if social.url %}
+              <a class="icon-{{ social.icon }} social" href="{{ social.url }}">
+              <i class="fa fa-{{ social.icon }}"></i>
+              </a>
+           {% endif %}
+        {% endfor %}
+    </li>
+   </ul>
+   <hr/>
+</div>
+
+<main class="content" role="main">
+
+    {% if site.tags.ruby %}
+    <h5 class="index-headline featured"><span>ruby</span></h5>
+
+    <div class="container featured">
+      {% for post in site.tags.ruby %}
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+              </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+ <!--    <h5 class="index-headline normal"><span>Regular</span></h5>
+    {% endif %} -->
+
+    <div class="cf frame">
+      {% for post in paginator.posts %}
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <nav class="pagination" role="navigation">
+      {% if paginator.next_page %}
+        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
+      {% endif %}
+      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.previous_page %}
+        {% if paginator.page == 2 %}
+          <a class="older-posts" href="/">Newer posts &rarr;</a>
+        {% else %}
+          <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+        {% endif %}
+      {% endif %}
+    </nav>
+
+
+    <!-- {{!! After all the posts, we have the previous/next pagination links }}
+    {{pagination}} -->
+
+</main>
