@@ -1,0 +1,23 @@
+<div class="nav">
+  <hr/>
+   <ul>
+     <li><a href="http://rolinyan.github.io/" class="home">Home</a></li>
+     <li><a href="http://rolinyan.github.io/">Life</a></li>
+     <li><a href="{{ site.baseurl }}/about/">About</a></li>
+     <li><a href="http://rolinyan.github.io/ruby_recipes">Ruby</a></li>
+     <li><a href="http://rolinyan.github.io/rails_recipes">Rails</a></li>
+     <li><a href="http://rolinyan.github.io/js_recipes">Javascript</a></li>
+     <li><a href="http://rolinyan.github.io/css_recipes">NodeJs</a></li>
+     <li><a href="http://rolinyan.github.io/swift_recipes">Swift</a></li>
+     <li>
+         {% for social in site.social %}
+            {% if social.url %}
+              <a class="icon-{{ social.icon }} social" href="{{ social.url }}">
+              <i class="fa fa-{{ social.icon }}"></i>
+              </a>
+           {% endif %}
+        {% endfor %}
+    </li>
+   </ul>
+   <hr/>
+</div>
