@@ -1,4 +1,8 @@
-
+.nav {
+	width: 100%;
+	max-width:960;
+	margin: 0px auto;
+}
 .nav ul{
 width:100%;
 max-width: 960px;
